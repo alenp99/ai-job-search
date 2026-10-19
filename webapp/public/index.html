@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Job Search</title>
+<link rel="icon" href="pip.gif">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="login" class="login hidden">
+  <form id="login-form" class="login-card">
+    <img src="pip.gif" alt="" width="72" height="72">
+    <h1>AI Job Search</h1>
+    <p class="muted" id="login-hint">Sign in to your job search workspace.</p>
+    <input type="password" id="login-password" placeholder="Password" autocomplete="current-password" required>
+    <button type="submit" class="btn primary">Sign in</button>
+    <p class="error" id="login-error"></p>
+  </form>
+</div>
+
+<div id="app" class="hidden">
+  <aside class="sidebar">
+    <div class="brand"><img src="pip.gif" alt="" width="32" height="32"><span>AI Job Search</span></div>
+    <nav>
+      <a href="#/" data-view="dashboard">Dashboard</a>
+      <a href="#/jobs" data-view="jobs">Jobs</a>
+      <a href="#/applications" data-view="applications">Applications</a>
+      <a href="#/profile" data-view="profile">Profile</a>
+      <a href="#/settings" data-view="settings">Search &amp; automation</a>
+      <a href="#/activity" data-view="activity">Activity <span id="running-badge" class="badge hidden"></span></a>
+    </nav>
+    <button class="btn ghost small" id="logout">Sign out</button>
+  </aside>
+  <main id="view"></main>
+</div>
+
+<div id="toast" class="toast hidden"></div>
+<script src="app.js" type="module"></script>
+</body>
+</html>
