@@ -1,0 +1,11 @@
+{
+	admin off
+	auto_https off
+}
+
+:{$PORT:8080} {
+	root * /srv
+	encode gzip
+	file_server
+	header /README.md Content-Type "text/markdown; charset=utf-8"
+}
